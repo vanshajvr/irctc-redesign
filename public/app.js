@@ -15,4 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (body.classList.contains("dark-mode")) {
                 toggleButton.classList.replace("fa-moon", "fa-sun");
             } else {
-                toggleButton.classList.rep
+                toggleButton.classList.rep;
+
+console.log("app.js is loaded!");
+
