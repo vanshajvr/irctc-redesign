@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRCTC Redesign</title>
-    <link rel="stylesheet" href="../src/styles/global.css">
+    <title>IRCTC New Design</title>
+    <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
-    <header>
-        <h1>IRCTC New Design</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Book Tickets</a></li>
-                <li><a href="#">PNR Status</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">IRCTC</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book Tickets</a></li>
+            <li><a href="#">PNR Status</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button id="darkModeToggle">🌙</button>
+    </nav>
 
-    <main>
-        <section class="hero">
-            <h2>Book your train tickets easily</h2>
-            <button>Get Started</button>
-        </section>
-    </main>
+    <section class="hero">
+        <h1>Book your train tickets easily</h1>
+        <button class="cta-button">Get Started</button>
+    </section>
 
-    <script src="../src/app.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
