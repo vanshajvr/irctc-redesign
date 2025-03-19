@@ -1,20 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
+const toggle = document.getElementById("dark-mode-toggle");
 
-    // Check local storage for theme preference
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-    }
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-    darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        // Save preference to local storage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-        } else {
-            localStorage.setItem("theme", "light");
-        }
-    });
+  // Save preference to local storage
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
+
+// Load theme from local storage
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+}
