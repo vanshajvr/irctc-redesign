@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRCTC Redesign</title>
-    <link rel="stylesheet" href="../src/styles/global.css">
- <!-- Ensure script loads properly -->
-    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="navbar">
             <div class="logo">IRCTC</div>
-            <ul>
+            <button class="toggle-btn">☰</button>
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Bookings</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <!-- Toggle button for dark mode -->
-            <i id="toggle-icon" class="fa fa-moon"></i>
-        </nav>
+        </div>
     </header>
 
-    <main>
+    <section class="hero">
         <h1>Welcome to IRCTC Redesign</h1>
         <p>Book your train tickets with ease!</p>
-    </main>
-<script src="app.js"></script>
+    </section>
 
+    <section class="image-slider">
+        <div class="slider">
+            <img src="train1.jpg" alt="Train 1">
+            <img src="train2.jpg" alt="Train 2">
+            <img src="train3.jpg" alt="Train 3">
+        </div>
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>
