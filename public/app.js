@@ -1,17 +1,18 @@
-const toggle = document.getElementById("dark-mode-toggle");
+document.addEventListener("DOMContentLoaded", () => {
+    // Select the toggle button (Make sure the ID matches your HTML)
+    const toggleButton = document.getElementById("toggle-icon");
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+    // Select the body element for applying dark mode
+    const body = document.body;
 
-  // Save preference to local storage
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
-});
+    // Check if the button exists before adding event listener
+    if (toggleButton) {
+        toggleButton.addEventListener("click", () => {
+            // Toggle dark mode class on body
+            body.classList.toggle("dark-mode");
 
-// Load theme from local storage
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-mode");
-}
+            // Toggle between moon and sun icons (optional)
+            if (body.classList.contains("dark-mode")) {
+                toggleButton.classList.replace("fa-moon", "fa-sun");
+            } else {
+                toggleButton.classList.rep
