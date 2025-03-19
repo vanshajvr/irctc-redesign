@@ -1,21 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Select the toggle button (Make sure the ID matches your HTML)
-    const toggleButton = document.getElementById("toggle-icon");
+document.addEventListener("DOMContentLoaded", function () {
+    // Toggle Navigation Menu
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const navLinks = document.querySelector(".nav-links");
 
-    // Select the body element for applying dark mode
-    const body = document.body;
+    toggleBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
 
-    // Check if the button exists before adding event listener
-    if (toggleButton) {
-        toggleButton.addEventListener("click", () => {
-            // Toggle dark mode class on body
-            body.classList.toggle("dark-mode");
+    // Image Slider
+    let index = 0;
+    const slides = document.querySelectorAll(".slider img");
 
-            // Toggle between moon and sun icons (optional)
-            if (body.classList.contains("dark-mode")) {
-                toggleButton.classList.replace("fa-moon", "fa-sun");
-            } else {
-                toggleButton.classList.rep;
+    function changeSlide() {
+        slides.forEach((img, i) => {
+            img.style.transform = `translateX(-${index * 100}%)`;
+        });
+        index = (index + 1) % slides.length; // Loop back to first image
+    }
 
-console.log("app.js is loaded!");
-
+    setInterval(changeSlide, 3000); // Change image every 3 seconds
+});
