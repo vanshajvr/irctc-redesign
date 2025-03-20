@@ -4,33 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRCTC Redesign</title>
-    <link rel="stylesheet" href="../src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">IRCTC</div>
-            <button class="toggle-btn">☰</button>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Bookings</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <section class="hero">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">IRCTC</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
         <h1>Welcome to IRCTC Redesign</h1>
         <p>Book your train tickets with ease!</p>
-    </section>
+    </header>
 
-    <section class="image-slider">
+    <!-- Image Slider -->
+    <section class="slider-container">
         <div class="slider">
             <img src="train1.webp" alt="Train 1">
             <img src="train2.webp" alt="Train 2">
             <img src="train3.webp" alt="Train 3">
         </div>
     </section>
+
+    <!-- Search Box -->
+    <section class="search-box">
+        <h2>Find Your Train</h2>
+        <input type="text" placeholder="From" id="from">
+        <input type="text" placeholder="To" id="to">
+        <input type="date" id="date">
+        <button onclick="searchTrain()">Search</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 IRCTC. All Rights Reserved.</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
