@@ -1,27 +1,40 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* Background */
 body {
-    background: #f4f4f4;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-header {
-    background: #0073e6;
-    padding: 15px;
-    color: white;
-}
-
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
-    margin: auto;
+    background: #0056b3;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
 }
 
 .nav-links {
@@ -30,7 +43,7 @@ header {
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .nav-links a {
@@ -39,58 +52,75 @@ header {
     font-weight: bold;
 }
 
-.toggle-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Responsive Menu */
+/* Responsive Navbar */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
-        background: #005bb5;
+        background: #0056b3;
         position: absolute;
         top: 60px;
-        right: 10px;
-        width: 150px;
-        text-align: center;
+        right: 0;
+        width: 100%;
+        padding: 10px;
     }
-
-    .nav-links.active {
+    .nav-links.show {
         display: flex;
-    }
-
-    .toggle-btn {
-        display: block;
     }
 }
 
 /* Hero Section */
 .hero {
-    padding: 50px;
-    font-size: 24px;
+    text-align: center;
+    padding: 60px 20px;
+    color: black;
+    font-size: 1.5rem;
 }
 
 /* Image Slider */
-.image-slider {
+.slider-container {
     overflow: hidden;
     width: 80%;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    width: 300%;
+    transition: transform 0.6s ease-in-out;
 }
 
 .slider img {
     width: 100%;
     height: auto;
+}
+
+/* Search Box */
+.search-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-box input, .search-box button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #0056b3;
+    color: white;
 }
