@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".slider").style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    setInterval(moveSlider, 10000); // Change image every 3 seconds
+    setInterval(moveSlider, 20000); // Change image every 20 seconds
 
 });
 
